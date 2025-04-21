@@ -8,11 +8,12 @@ public class Mail {
     private String datetime;
     private boolean isRead;
 
-    public Mail(String sender, String subject, String message, String date) {
+    public Mail(String sender, String subject, String message, String datetime) {
         this.sender = sender;
         this.subject = subject;
         this.message = message;
         this.datetime = datetime;
+        this.isRead = false;
     }
 
     public void setIsRead(){

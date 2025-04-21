@@ -6,7 +6,11 @@ public class Inbox {
 
     private ArrayList<Mail> mails;
 
-    public Inbox(Mail mail){
+    public Inbox(){
+        mails = new ArrayList<>();
+    }
+
+    public void addMail(Mail mail) {
         mails.add(mail);
     }
 
@@ -27,14 +31,14 @@ public class Inbox {
         }
     }
 
-    public int countUnread(){
+    public void countUnread(){
         int unread = 0;
         for(int i = 0; i<mails.size(); i++){
             if (mails.get(i).getIsRead() == false){
                 unread++;
             }
         }
-        return unread;
+        System.out.println("Ungelesene Mails: " +unread);
     }
 
 
