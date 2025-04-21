@@ -8,7 +8,7 @@ public class Main {
     Mail mail3 = new Mail("isa@studi.com", "Hallo", "Wie geht's?", "9:46");
     Mail mail4 = new Mail("julius@studi.com", "Uni", "Um wie viel Uhr haben wir morgen Vorlesung?", "22:56");
 
-    mail1.setIsRead();
+    mail1.markAsRead();
 
     Inbox inbox1 = new Inbox();
     inbox1.addMail(mail1);

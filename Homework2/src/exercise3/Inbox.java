@@ -24,7 +24,7 @@ public class Inbox {
     public void open(int index){
         if(index < mails.size() && index >= 0){
             Mail recentMail = mails.get(index);
-            recentMail.setIsRead();
+            recentMail.markAsRead();
             recentMail.print();
         }else{
             System.out.println("Index out of bounds");

@@ -16,7 +16,7 @@ public class Mail {
         this.isRead = false;
     }
 
-    public void setIsRead(){
+    public void markAsRead(){
         isRead = true;
     }
 
