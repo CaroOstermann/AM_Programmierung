@@ -14,9 +14,11 @@ public class Inbox {
         mails.add(mail);
     }
 
-    public void printAllMails(){
+    public void printHeaders(){
         for(int i = 0; i<mails.size(); i++ ){
-            System.out.println(mails.get(i).getIsRead() + " | " + mails.get(i).getSubject() + " | " + mails.get(i).getSender() + " | " + mails.get(i).getDatetime());
+            Mail mail = mails.get(i);
+            String readStatus = mail.getIsRead() ? "READ" : "NOT READ"; //Wenn true --> readStatus = "READ"
+            System.out.println(readStatus + " | " + mail.getSubject() + " | " + mail.getSender() + " | " + mail.getDatetime());
         }
 
     }
@@ -33,8 +35,8 @@ public class Inbox {
 
     public void countUnread(){
         int unread = 0;
-        for(int i = 0; i<mails.size(); i++){
-            if (mails.get(i).getIsRead() == false){
+        for(Mail mail : mails){ //braucht index nicht
+            if (mail.getIsRead() == false){
                 unread++;
             }
         }

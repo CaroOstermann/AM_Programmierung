@@ -8,7 +8,7 @@ public class Main {
     Mail mail3 = new Mail("isa@studi.com", "Hallo", "Wie geht's?", "9:46");
     Mail mail4 = new Mail("julius@studi.com", "Uni", "Um wie viel Uhr haben wir morgen Vorlesung?", "22:56");
 
-    mail1.markAsRead();
+    mail1.markAsRead(); //mail 1 = gelesen
 
     Inbox inbox1 = new Inbox();
     inbox1.addMail(mail1);
@@ -17,10 +17,13 @@ public class Main {
     inbox1.addMail(mail4);
 
     inbox1.countUnread();
+
     inbox1.open(0);
-    inbox1.open(3);
+    inbox1.open(3); //mail 4 (julius@sudi.com) wird gelesen
     inbox1.open(6);
-    inbox1.printAllMails();
+    inbox1.printHeaders();
+    
+    inbox1.countUnread();
 
 
     }

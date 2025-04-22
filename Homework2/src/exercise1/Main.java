@@ -9,7 +9,7 @@ public class Main {
         Textbook t2 = new Textbook("Chroniken", 2024, "Sarah Moos", "Fantasy");
         System.out.println(t2.getInfo());
 
-        
+
 
     }
 }
